@@ -1,0 +1,24 @@
+{
+  "name": "git-image-diff",
+  "version": "0.0.0",
+  "description": "A tool for comparing image (snapshot) differences between your branch and master.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "git",
+    "image",
+    "snapshot",
+    "diff",
+    "difference",
+    "regression"
+  ],
+  "author": "Dick Comley",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "jest-image-snapshot": "^4.2.0",
+    "rimraf": "^3.0.2"
+  }
+}
