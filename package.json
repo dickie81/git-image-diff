@@ -3,8 +3,13 @@
   "version": "0.0.0",
   "description": "A tool for comparing image (snapshot) differences between your branch and master.",
   "main": "index.js",
+  "type": "module",
+  "bin": {
+    "git-image-diff": "./bin/index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "keywords": [
     "git",
@@ -16,9 +21,22 @@
   ],
   "author": "Dick Comley",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dickie81/git-image-diff.git"
+  },
   "dependencies": {
     "glob": "^7.1.6",
     "jest-image-snapshot": "^4.2.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "yargs": "^16.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "prettier": "^2.1.2"
   }
 }

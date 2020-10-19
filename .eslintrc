@@ -1,0 +1,57 @@
+{
+  "env": {
+    "amd": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-unused-vars": "error",
+    "quotes": [2, "double", { "avoidEscape": true }],
+    "comma-dangle": ["error", "never"],
+    "eqeqeq": ["error", "always"],
+    "no-var": "error",
+    "semi": "error",
+    "simple-import-sort/sort": [
+      "error",
+      {
+        "groups": [
+          // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+          ["^@?\\w"],
+          // Absolute imports and other imports such as Vue-style `@/foo`.
+          // Anything that does not start with a dot.
+          ["^[^.]"],
+          // Relative imports.
+          // Anything that starts with a dot.
+          ["^\\."],
+          // Side effect imports.
+          ["^\\u0000"]
+        ]
+      }
+    ],
+    "arrow-body-style": ["error", "as-needed"]
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018,
+    "prettier/prettier": [
+      "error",
+      {
+        "bracketSpacing": true,
+        "printWidth": 120,
+        "semi": true,
+        "tabWidth": 2,
+        "useTabs": false
+      }
+    ]
+  },
+  "plugins": ["prettier", "simple-import-sort"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

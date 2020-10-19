@@ -1,5 +1,6 @@
+#!/usr/bin/env node
 /* eslint-disable no-console */
-import doDiff from "./lib/doDiff";
+import doDiff from "../lib/doDiff.js";
 
 (async () => {
   try {

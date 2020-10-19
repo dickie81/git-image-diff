@@ -1,0 +1,1 @@
+# git-image-diff
