@@ -5,7 +5,8 @@ import doDiff from "../lib/doDiff.js";
 (async () => {
   try {
     await doDiff({
-      snapsDir: "stories/__tests__/__image_snapshots__/",
+      masterBranch: "master",
+      snapsDir: "test/fixtures/",
       diffDir: "./snapshot-diff",
       branchNameFromCli: process.argv[2],
       prIdFromCli: process.argv[3],
